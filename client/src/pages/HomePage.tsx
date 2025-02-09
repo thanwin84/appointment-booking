@@ -5,7 +5,7 @@ export const HomePage = () => {
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ width: '100%', textAlign: 'center' }}>
+    <Box className="test" sx={{ width: '100%', textAlign: 'center' }}>
       <Typography variant="h1">Welcome!</Typography>
       <Button
         variant="contained"
