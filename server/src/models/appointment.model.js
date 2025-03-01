@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { appointmentStatus } = require('../constants');
 
 const appointmentSchema = new mongoose.Schema(
   {
@@ -14,8 +13,8 @@ const appointmentSchema = new mongoose.Schema(
     },
     status: {
       type: String,
-      enum: Object.values(appointmentStatus),
-      default: appointmentStatus.SCHEDULED,
+      enum: ['scheduled', 'cancelled', 'pending'],
+      default: 'scheduled',
     },
     isDeleted: {
       type: Boolean, // for soft delete
