@@ -6,6 +6,9 @@ import { BookSlotPage, HomePage, LoginPage, SignupPage } from './pages';
 import QueryProvider from './providers/QueryProvider';
 
 import './index.css';
+import Dashboard from './pages/admin/Dashboard';
+import Slots from './pages/admin/Slots';
+import Appointments from './pages/admin/Appointments';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -17,6 +20,11 @@ createRoot(document.getElementById('root')!).render(
           </Route>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
+          <Route path="admin">
+            <Route index element={<Dashboard />} />
+            <Route path="slots" element={<Slots />} />
+            <Route path="appointments" element={<Appointments />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </QueryProvider>
