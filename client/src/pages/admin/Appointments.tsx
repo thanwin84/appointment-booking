@@ -1,5 +1,5 @@
-type Props = {};
+type AppointmentProps = {};
 
-export default function Appointments({}: Props) {
+export default function Appointments({}: AppointmentProps) {
   return <div>Appointment Page</div>;
 }

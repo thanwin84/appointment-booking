@@ -1,5 +1,5 @@
-type Props = {};
+type SlotProps = {};
 
-export default function Slots({}: Props) {
+export default function Slots({}: SlotProps) {
   return <div>Slots</div>;
 }
